@@ -2,9 +2,8 @@
 using namespace std;
 using int64 = long long;
 
-// Fallback modular multiplication without __int128
 int64 modmul(int64 a, int64 b, int64 mod) {
-    __int128 res = (__int128)a * b;   // <-- works in GCC/Clang
+    __int128 res = (__int128)a * b;   
     return (int64)(res % mod);
 }
 
@@ -58,3 +57,4 @@ int main() {
     cout << ans << "\n";
     return 0;
 }
+
